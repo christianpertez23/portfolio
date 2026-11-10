@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Log in · Christian Pertez</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="site-nav"></div>
+<main class="wrap">
+<div class="card auth">
+  <div class="tabs"><button id="tl" class="on" type="button">Log in</button><button id="tr" type="button">Create account</button></div>
+  <form id="af">
+    <input id="nm" placeholder="Your name" hidden autocomplete="name">
+    <input id="em" type="email" placeholder="Email" required autocomplete="email">
+    <input id="pw" type="password" placeholder="Password (6+ characters)" minlength="6" required autocomplete="current-password">
+    <div class="err" id="er" role="alert"></div>
+    <button id="go">Log in</button>
+  </form>
+  <p class="chip" style="margin:1rem 0 0">Log in to view the Projects section.</p>
+</div>
+</main>
+<div id="site-foot"></div>
+<script src="js/app.js"></script>
+</body>
+</html>

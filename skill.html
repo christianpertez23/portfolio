@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Skills · Christian Pertez</title>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="site-nav"></div>
+<main class="wrap">
+<div class="ph"><span class="eyebrow">Skills</span><h2 class="t">Strengths I bring to <span class="gt">every project.</span></h2>
+<p class="sub">People skills, technical skills and the process I follow.</p></div>
+<section><h3 style="margin-bottom:1.2rem">Core strengths</h3><div class="grid" id="sk"></div></section>
+<div class="grid" style="margin-top:1.1rem">
+  <div class="card"><div class="ic">⚙️</div><h3>Technical toolkit</h3><p>Languages and tools I use in my projects.</p><div class="tags" id="tech"></div></div>
+  <div class="card"><div class="ic">🎬</div><h3>Creative toolkit</h3><p>How I turn ideas into visuals and sound.</p><div class="tags"><span>Video editing</span><span>Poster design</span><span>Responsive layout</span><span>Band performance</span><span>Storytelling</span></div></div>
+</div>
+<section class="blk"><span class="eyebrow">Process</span><h2 class="t">How I build</h2><p class="sub">A simple workflow that keeps projects clear and on time.</p>
+  <div class="steps"><div><h3>Understand</h3><p>Listen to the goal, audience and deadline.</p></div><div><h3>Design</h3><p>Sketch clean layouts and pick a consistent style.</p></div><div><h3>Build</h3><p>Code responsive pages and polish the details.</p></div><div><h3>Launch</h3><p>Test on real devices, publish and improve.</p></div></div></section>
+<section class="blk"><div class="band"><div><h2>Want to see them in action?</h2><p>Browse my projects.</p></div><a class="btn" href="project.html">View projects</a></div></section>
+<script>
+[['💬','Communication','Explains ideas clearly and listens first, in teams and on stage.',5],
+['🤝','Teamwork','Shares the work and builds on what others bring, from band to class projects.',4],
+['🧩','Problem solving','Breaks big problems into small steps and tests until it works.',4],
+['🔄','Adaptability','Picks up new tools quickly and adjusts when plans change.',4],
+['✨','Creativity','Brings fresh layouts, visuals and ideas to every project.',3],
+['🔍','Critical thinking','Questions assumptions and checks details before shipping.',4]]
+.forEach(([ic,n,d,l])=>document.getElementById('sk').insertAdjacentHTML('beforeend',
+`<div class="card str"><div class="top"><div class="ic">${ic}</div><span class="lv${l>4?' a':''}">${l>4?'Advanced':l>3?'Proficient':'Growing'}</span></div><h3>${n}</h3><p>${d}</p><div class="pips">${[1,2,3,4,5].map(i=>`<i class="${i<=l?'f':''}"></i>`).join('')}</div></div>`));
+[['HTML',1],['CSS',1],['JavaScript',1],['PHP + SQLite',0],['Responsive design',1],['Git & GitHub',0]]
+.forEach(([n,h])=>document.getElementById('tech').insertAdjacentHTML('beforeend',`<span class="${h?'hot':''}">${n}</span>`));
+</script>
+</main>
+<div id="site-foot"></div>
+<script src="js/app.js"></script>
+</body>
+</html>
